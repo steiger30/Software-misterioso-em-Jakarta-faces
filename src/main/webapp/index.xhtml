@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: UTFPR
+  Date: 03/10/2023
+  Time: 08:54
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+    <title>Title</title>
+</h:head>
+
+<h:body>
+ ola mundo!
+    <h:form>
+        <h:inputText value="#{jFHashTool.messagem}" />
+        <h:commandButton value="add" action="#{jFHashTool.add()}" />
+    </h:form>
+    <br/>
+    Lista de produtos
+    <h:form>
+        <h:dataTable value="#{jFHashTool.getAll()}" var="hashTool">
+            <h:column>
+                <h:outputText value="#{hashTool.message}"/>
+            </h:column>
+            <h:column>
+                <h:outputText value="#{hashTool.hash}"/>
+            </h:column>
+            <h:column>
+                <h:outputText value="#{hashTool.hash_reverse}"/>
+            </h:column>
+        </h:dataTable>
+    </h:form>
+</h:body>
+</html>
